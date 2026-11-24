@@ -1,0 +1,23 @@
+
+name: My First GitHub Action
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Welcome Message
+        run: echo "Hello Pavan! My GitHub Action is working!"
+
+      - name: Show Current Date
+        run: date
+
+      - name: Check Python Version
+        run: python3 --version
+
+      - name: Success Message
+        run: echo "Congratulations! Your first workflow completed successfully!"
